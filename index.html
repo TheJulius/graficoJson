@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/index.js"></script> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <title>Gerador de Gráficos</title>
+</head>
+<body>
+<section>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light mb-5">
+        <a class="navbar-brand m-4" href="#">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Gerar JSON</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Gerar Gráfico</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</section>
+
+<section class="m-5">
+    <form action="#" method="post" name="form_name" id="form_id" class="form_class">
+        <div class="form-group input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" for="a1">Valor do A1</span>
+            </div>
+            <input type="number" class="form-control" aria-label="a1" placeholder="A1" id="a1">
+        </div>
+    
+        <div class="form-group input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" for="razão">Razão</span>
+            </div>
+            <input type="number" step="0.1" class="form-control" aria-label="razão" placeholder="Razão (use PONTO para decimal)" id="razao">
+        </div>
+    
+        <div class="form-group input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="qtd_de_elementos">Quantidade de Elementos</label>
+            </div>
+            <select class="custom-select" id="qtd_de_elementos">
+                <option value="1" selected>Um</option>
+                <option value="2">Dois</option>
+                <option value="3">Três</option>
+                <option value="4">Quatro</option>
+                <option value="5">Cinco</option>
+                <option value="6">Seis</option>
+                <option value="7">Sete</option>
+                <option value="8">Oito</option>
+                <option value="9">Nove</option>
+                <option value="10">Dez</option>
+            </select>
+        </div>
+    
+        <div class="form-group input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="pa_pg">Progressão</label>
+            </div>
+            <select class="custom-select" id="pa_pg">
+                <option value="PA" selected>Aritmética</option>
+                <option value="PG">Geométrica</option>
+            </select>
+        </div>
+
+        <input type="button" name="submit_id" id="btn_id" value="Enviar Form" class="btn btn-primary" onclick="form_submit()"/>
+        <input type="button" name="submit_id" id="btn_id" value="Formatar JSON" class="btn btn-primary" onclick="cria_json()"/>
+    </form>
+    
+</section>
+</body>
+</html>
