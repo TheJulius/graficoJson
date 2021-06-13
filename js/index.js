@@ -1,3 +1,4 @@
+
 function validation(){ //retorna true se os campos forem preenchidos
     
     var razao = document.getElementById("razao").value;
@@ -44,6 +45,8 @@ function cria_json(){
         var objeto = JSON.parse(stringJson);
         console.log("JSON CRIADO COM SUCESSO");
         console.log(objeto);
+
+        return(objeto);
     }
 }
 
@@ -51,4 +54,12 @@ function converte_json_string(arq){
 
     var jsonString = JSON.stringify(arq);
     console.log(jsonString);
+}
+
+function cria_arquivo(){
+
+    var infoJson = cria_json();
+
+    var file = new File(['"' + infoJson + '"'], "hello world.txt", {type: "text/plain;charset=utf-8"});
+    FileSaver.saveAs(file);
 }
